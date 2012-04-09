@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>syoboi_calendar.gem by r7kamura</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>syoboi_calendar.gem</h1>
+        <p>Simple gem for SyoboiCalendar to search Japanese anime lineup</p>
+        <p class="view"><a href="https://github.com/r7kamura/syoboi_calendar">View the Project on GitHub <small>r7kamura/syoboi_calendar</small></a></p>
+        <ul>
+          <li><a href="https://github.com/r7kamura/syoboi_calendar/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/r7kamura/syoboi_calendar/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/r7kamura/syoboi_calendar">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>About</h3>
+
+<p>Simple gem for <a href="http://cal.syoboi.jp/">SyoboiCalendar</a> to search Japanese anime lineup</p>
+
+<h3>Require</h3>
+
+<p>Ruby 1.9.2 or higher</p>
+
+<h3>Usage</h3>
+
+<div class="highlight">
+<pre><span class="c1"># search_anime.rb</span>
+<span class="nb">require</span> <span class="s2">"syoboi_calender"</span>
+
+<span class="n">client</span>   <span class="o">=</span> <span class="no">SyoboiCalendar</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span>
+<span class="n">programs</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="ss">:range</span> <span class="o">=&gt;</span> <span class="s2">"2012/4/1-2012/4/30"</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="s2">"name    : </span><span class="si">#{</span><span class="n">programs</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="nb">puts</span> <span class="s2">"channel : </span><span class="si">#{</span><span class="n">programs</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">channel_name</span><span class="si">}</span><span class="s2">"</span>
+<span class="nb">puts</span> <span class="s2">"start   : </span><span class="si">#{</span><span class="n">programs</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">start_time</span><span class="si">}</span><span class="s2">"</span>
+</pre>
+</div>
+
+
+<pre><code>$ gem install syoboi_calendar
+$ ruby search_anime.rb
+name    : さんかれあ #1 私が…ゾンビに…なったら
+channel : 2012-04-06 02:50:00 +0900
+start   : TBS
+</code></pre>
+
+<h3>Other</h3>
+
+<p>Feel free to create issues or report bugs.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/r7kamura">r7kamura</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
