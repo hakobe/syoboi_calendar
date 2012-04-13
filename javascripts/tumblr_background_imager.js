@@ -28,6 +28,14 @@ var TumblrImager = {
     setInterval(function() {
       self.rotateUrl(function(url) { self.changeImage(url) });
     }, self.interval);
+    this.preloadImages();
+  },
+
+  preloadImages: function() {
+    $.each(this.urls, function() {
+      console.log(this);
+      $('<img>').attr('src', this);
+    });
   },
 
   changeImage: function() {
