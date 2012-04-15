@@ -54,7 +54,7 @@
 <pre><span class="c1"># search_anime.rb</span>
 <span class="nb">require</span> <span class="s2">"syoboi_calender"</span>
 
-<span class="n">client</span>   <span class="o">=</span> <span class="no">SyoboiCalendar</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span>
+<span class="n">client</span>   <span class="o">=</span> <span class="no">SyoboiCalendar</span><span class="o">.</span><span class="n">new</span>
 <span class="n">programs</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="ss">:range</span> <span class="o">=&gt;</span> <span class="s2">"2012/4/1-2012/4/30"</span><span class="p">)</span>
 
 <span class="nb">puts</span> <span class="s2">"name    : </span><span class="si">#{</span><span class="n">programs</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span>
