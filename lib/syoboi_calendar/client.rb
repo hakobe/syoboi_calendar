@@ -54,7 +54,6 @@ class SyoboiCalendar
         tr.search("td:nth-child(1) a").each do |a|
           if match = a.attributes["href"].value.match(%r|/tid/(\d+)$|)
             args[:tid]  = match[1]
-            args[:name] = a.text
           end
         end
 

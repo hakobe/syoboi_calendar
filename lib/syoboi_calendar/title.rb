@@ -4,12 +4,12 @@ class SyoboiCalendar
   class Title
     attr_reader(
       :tid,
-      :name,
     )
 
     # (1) :method_name => "NameInSyoboiCalendarResponse"
     # (2) :method_name => ["NameInSyoboiCalendarResponse", callback]
     EXT_PARAM_MAP = {
+      :name             => "Title",
       :cat              => "Cat",
       :comment          => "Comment",
       :first_channel    => "FirstCh",
@@ -46,7 +46,6 @@ class SyoboiCalendar
     #   and @blob is updated to fill up @blob[:channel_name]
     def initialize(args)
       @tid  = args[:tid]
-      @name = args[:name]
       @blob = {}
     end
 
